@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { signupServiceRequestor } from '../services/api';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 const ServiceRequestorSignupForm = (props) => {
   const navigate = useNavigate();
@@ -51,8 +52,9 @@ const ServiceRequestorSignupForm = (props) => {
     }
     };
   return (
+    <>
+    <Header id={props.id} />
 <form onSubmit={handleSubmit}>
-      {/* Your form fields for Service Provider signup */}
       <label>
         Name:
         <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
@@ -83,6 +85,7 @@ const ServiceRequestorSignupForm = (props) => {
       {/* Other fields */}
       <button type="submit">Sign Up</button>
     </form>
+    </>
   );
 };
 

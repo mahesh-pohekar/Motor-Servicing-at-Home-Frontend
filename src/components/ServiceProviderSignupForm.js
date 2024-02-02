@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { signupServiceProvider } from '../services/api';
 import { useNavigate } from 'react-router-dom';
+import Header from './Header';
 
 const ServiceProviderSignupForm = (props) => {
   const navigate = useNavigate();
@@ -56,6 +57,8 @@ const ServiceProviderSignupForm = (props) => {
   };
 
   return (
+    <>
+    <Header id={props.id} />
     <form onSubmit={handleSubmit}>
       {/* Your form fields for Service Provider signup */}
       <label>
@@ -88,6 +91,7 @@ const ServiceProviderSignupForm = (props) => {
       {/* Other fields */}
       <button type="submit">Sign Up</button>
     </form>
+    </>
   );
 };
 

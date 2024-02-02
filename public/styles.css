@@ -1,6 +1,9 @@
 html{
     background-color: #bb9696;
 }
+body{
+    margin: 0;
+}
 #brand{
     display: inline-block;
     margin-left: 0.25rem;
@@ -65,4 +68,10 @@ label{
     border-radius: 0.25rem;
     color: black;
     text-align: center;
+}
+.logoutbtn{
+    position: relative;
+    display: block;
+    margin: auto;
+    top: 10rem;
 }

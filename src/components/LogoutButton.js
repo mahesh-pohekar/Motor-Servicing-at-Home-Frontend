@@ -23,7 +23,7 @@ const LogoutButton = (props) => {
   return (
     <>
     <Header id={props.id}/>
-    <button onClick={handleLogout}>Confirm Logout</button>
+    <button className='logoutbtn' onClick={handleLogout}>Confirm Logout</button>
     </>
   );
 };
