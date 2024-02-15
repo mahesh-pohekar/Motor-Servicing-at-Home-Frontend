@@ -21,6 +21,7 @@ const ServiceRequestsList = (props) => {
 
     fetchServiceRequests();
   }, []);
+ 
 
   return (
     <>
@@ -37,7 +38,14 @@ const ServiceRequestsList = (props) => {
             <strong>Name:</strong> {request.requestor.name}<br />
             <strong>Mobile:</strong> {request.requestor.mob}<br />
             <strong>Email:</strong> {request.requestor.email}<br />
-            <strong>Location:</strong> {request.requestor.location.coordinates.join(', ')}<br />
+            <strong>Location:</strong> {request.requestor.location.coordinates.join(', ')}<br/>
+            <button><a
+                href={`https://www.google.com/maps?q=${request.requestor.location.coordinates[0]},${request.requestor.location.coordinates[1]}&z=15`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Google Map
+              </a></button> 
             <hr />
           </li>
         ))}

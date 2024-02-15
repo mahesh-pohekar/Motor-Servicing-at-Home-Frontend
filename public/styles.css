@@ -4,6 +4,11 @@ html{
 body{
     margin: 0;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
+
 #brand{
     display: inline-block;
     margin-left: 0.25rem;
@@ -75,3 +80,4 @@ label{
     margin: auto;
     top: 10rem;
 }
+
